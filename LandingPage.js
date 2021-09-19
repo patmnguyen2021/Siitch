@@ -6,6 +6,7 @@ import Heart from './MeatComponents/Heart';
 import Water from './MeatComponents/Water';
 import Search from './Search/Search';
 import Compare, {compareScreen} from './Comparing/Compare';
+import Camera, {cameraScreen} from './Camera/Camera';
 import NormalSearch from './NormalSearchingComponents/NormalSearch';
 import What from './MeatComponents/What';
 // Jeans import
@@ -264,6 +265,22 @@ function HomeScreen() {
                   />
                 ) : (
                   <Image source={Profiles.vs_compare} resizeMode="contain" />
+                ),
+            }}
+          />
+            <Tab.Screen
+            name="Camera"
+            component={cameraScreen}
+            options={{
+              tabBarLabel: 'Camera',
+              tabBarIcon: ({focused}) =>
+                focused ? (
+                  <Image
+                    source={Profiles.camera_select}
+                    resizeMode="contain"
+                  />
+                ) : (
+                  <Image source={Profiles.camera} resizeMode="contain" />
                 ),
             }}
           />
